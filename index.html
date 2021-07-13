@@ -1,69 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
     <link rel="sortcut icon" href="https://image.flaticon.com/icons/png/512/522/522507.png" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="./styles/style.css">
 </head>
+<body>
+    <main>
+        <div class="calculator">
+            <div class="content">
+                <form>
+                    <input class="textview" id='textview'>     
+                </form>
+                <div class="column">
+                    <div class="row">
+                        <input type="button" class='btn btn-al' onclick='c()' value="C" id="ctext">
+                        <input type="button" class='btn btn-al' onclick="back()" value="<">
+                        <input type="button" class='btn btn-op' onclick="insert('/')" value="/">
+                        <input type="button" class='btn btn-op' onclick="insert('*')" value="*">
+                    </div>
+                    <div class="row">
+                        <input type="button" class='btn btn-num' onclick="insert(7)" value="7">
+                        <input type="button" class='btn btn-num' onclick="insert(8)" value="8">
+                        <input type="button" class='btn btn-num' onclick="insert(9)" value="9">
+                        <input type="button" class='btn btn-op' onclick="insert('+')" value="+">
+                    </div>
+                    <div class="row">
+                        <input type="button" class='btn btn-num' onclick="insert(4)" value="4">
+                        <input type="button" class='btn btn-num' onclick="insert(5)" value="5">
+                        <input type="button" class='btn btn-num' onclick="insert(6)" value="6">
+                        <input type="button" class='btn btn-op' onclick="insert('-')" value="-"> 
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column">
+                        <div class="row">
+                            <input type="button" class='btn btn-num' onclick="insert(1)" value="1">
+                            <input type="button" class='btn btn-num' onclick="insert(2)" value="2">
+                            <input type="button" class='btn btn-num' onclick="insert(3)" value="3">
+                        </div>
+                        <div class="row">
+                            <input type='button' class='btn btn-al btn-zero' onclick="insert(0)" value='0' id='n0'>
+                            <input type='button' class='btn btn-al' onclick="insert('.')" value='.' id='n0'>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <input type="submit" class='btn btn-equal' onclick='equal()' value="=">
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </main>
 
+    <script src="./js/main.js"></script>
 
-<body style="background-color: #010146;">
-
-<div class="borda">
-
-<div class="countainer ">
-<form>
-    <input class="textview" id='textview'>     
-</form>
-</div>
-<br>
-<div class="countainer ">
-<table>
-    <td>
-        <input type="button" class='btn ' onclick='c()' value="C" id="ctext">
-        <input type="button" class='btn ' onclick="back()" value="<">
-        <input type="button" class='btn btn-op' onclick="insert('/')" value="/">
-        <input type="button" class='btn btn-op' onclick="insert('*')" value="*">
-    </td>
-    <tr>
-        <td>
-        <input type="button" class='btn btn-num' onclick="insert(7)" value="7">
-        <input type="button" class='btn btn-num' onclick="insert(8)" value="8">
-        <input type="button" class='btn btn-num' onclick="insert(9)" value="9">
-        <input type="button" class='btn btn-op' onclick="insert('+')" value="+">
-        </td>
-    </tr>
-    <tr>
-        <td>
-        <input type="button" class='btn btn-num' onclick="insert(4)" value="4">
-        <input type="button" class='btn btn-num' onclick="insert(5)" value="5">
-        <input type="button" class='btn btn-num' onclick="insert(6)" value="6">
-        <input type="button" class='btn btn-op' onclick="insert('-')" value="-"> 
-        </td>
-    </tr>
-    <tr>
-        <td>
-        <input type="button" class='btn btn-num' onclick="insert(1)" value="1"> </input>
-        <input type="button" class='btn btn-num' onclick="insert(2)" value="2">
-        <input type="button" class='btn btn-num' onclick="insert(3)" value="3">
-        <input type="button" class='btn btn-primary button' onclick='equal()' value="=">
-    </td>
-</tr>
-<tr>
-    <td>
-        <input type='button' class='btn btn-zero button' style='height: 80px; width: 248px' onclick="insert(0)" value='0' id='n0'>
-        <input type='button' class='btn btn-secondary button' onclick="insert('.')" value='.' id='n0'>
-    </td>
-</tr>
-</table>
-
-</div>
-</div>
-
-    <script src="main.js"></script>
-  
 </body>
 </html>
